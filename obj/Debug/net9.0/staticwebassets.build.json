@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "+GfbFLuJVvyISoicmGkYcGYu08uDVz/9OOy1p3iMFdo=",
+  "Source": "HaningeServer",
+  "BasePath": "_content/HaningeServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

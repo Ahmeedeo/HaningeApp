@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>HaningeApp - Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: radial-gradient(mintcream 0%, gray 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrap {
+            width: 350px;
+            background: #fff;
+            border-radius: 15px;
+            border: 5px solid #2c3033;
+            box-shadow: 0 0 0px 1px rgba(255,255,255,.4), 0 0 0px 3px #2c3033;
+            padding: 20px;
+        }
+        h1 { text-align: center; margin-bottom: 15px; color: #333; }
+        #loginDiv, #todoDiv { display: flex; flex-direction: column; gap: 10px; }
+        input[type="text"], input[type="password"], #newTodo {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px;
+            background-color: #3b4755;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s;
+        }
+        button:hover { background-color: #687480; }
+        ul { list-style: none; padding: 0; margin-top: 10px; }
+        li {
+            background: rgba(0,0,50,.1);
+            padding: 8px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+        li.done { text-decoration: line-through; color: rgba(0,0,0,.4); }
+        li button { margin-left: 5px; padding: 5px 8px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>HaningeApp</h1>
+        <div id="loginDiv">
+            <h2>Logga in</h2>
+            <input type="text" id="username" placeholder="Användarnamn">
+            <input type="password" id="password" placeholder="Lösenord">
+            <button onclick="login()">Logga in</button>
+        </div>
+        <div id="todoDiv" style="display:none;">
+            <h2>Din Todo-lista</h2>
+            <ul id="todoList"></ul>
+            <input type="text" id="newTodo" placeholder="Ny todo">
+            <button onclick="addTodo()">Lägg till</button>
+            <button onclick="logout()">Logga ut</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
